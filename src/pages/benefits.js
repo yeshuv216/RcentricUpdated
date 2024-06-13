@@ -25,6 +25,13 @@ const BigCard = ({ id, img, title, desc }) => {
         </div>
         <h2 className="benefitsTitle">{title}</h2>
         <p className="benefitsDesc">{desc}</p>
+        {title=="F&B BENEFITS"?<Link
+            style={{justifyContent:'center',textAlign:'center',alignContent:'center'}}
+            href='https://www.melia.com/en/hotels/united-arab-emirates/dubai/me-dubai/restaurants'
+            className="text-[10px] lg:text-[14px] uppercase lg:w-[220px] font-medium tracking-wider h-[40px] bg-black text-white w-[140px] mt-10"
+          >
+            Discover
+          </Link>:null}
       </div>
     </div>
   );
@@ -62,13 +69,7 @@ const SmallCard = ({ id, img, title, desc }) => {
           >
             Discover
           </Link>:null}
-          {title=="F&B BENEFITS"?<Link
-            style={{justifyContent:'center',textAlign:'center',alignContent:'center'}}
-            href='https://www.melia.com/en/hotels/united-arab-emirates/dubai/me-dubai/restaurants'
-            className="text-[10px] lg:text-[14px] uppercase lg:w-[220px] font-medium tracking-wider h-[40px] bg-black text-white w-[140px] mt-10"
-          >
-            Discover
-          </Link>:null}
+          
       </div>
     </div>
   );

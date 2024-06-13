@@ -7,7 +7,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
 import Ukiyo from "ukiyojs";
-
+import Link from "next/link";
 const rewardsData = [
   {
     title: "More Value",
@@ -137,7 +137,13 @@ const RewardsPreviliges = () => {
               Maximum of 5 rooms per stay
             </p>
           </div>
-          <button className="cta mt-12 lg:mt-20">Explore More</button>
+          <Link
+            style={{justifyContent:'center',textAlign:'center',alignContent:'center'}}
+            href='https://www.melia.com/es/hoteles/emiratos-arabes-unidos/dubai/me-dubai'
+            className="text-[10px] lg:text-[14px] uppercase lg:w-[220px] font-medium tracking-wider h-[40px] bg-black text-white w-[140px] mt-10"
+          >
+            Explore More
+          </Link>
         </div>
       </section>
 

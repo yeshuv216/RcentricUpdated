@@ -236,7 +236,25 @@ export default function Home() {
       <BenefitsExperiencesCarousel data={benefitExperiences} />
 
       <div data-fade-up>
+      <div className="mt-12 lg:mt-24">
+        <Image
+          src={"/img/opus-map.svg"}
+          height={1980}
+          width={1080}
+          alt="map"
+          className="w-screen h-full"
+        />
+      </div>
         <section className="grid place-items-center mt-16 lg:mt-36 container w-11/12">
+        <div className="h-[15vh] lg:h-[15vh]">
+                  <Image
+                    src={require('../../public/img/meDubai/meDubai.svg')}
+                    width={1920}
+                    height={1080}
+                    alt="beyond points"
+                    className="w-full h-full object-cover object-[50%_60%]"
+                  />
+                </div>
           <p className="subtitle text-center">REWARDS AND PRIVILEGES</p>
           <h1 className="title text-center mt-3">BEYOND POINTS</h1>
           <p className="para text-center mt-4 w-full lg:w-[50%] text-pretty">

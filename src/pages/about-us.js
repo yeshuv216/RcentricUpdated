@@ -23,11 +23,7 @@ const AboutUs = () => {
       >
         <h1 className="title text-center">Introducing R Centric</h1>
         <p className="para text-center mt-6 lg:mt-8 w-full lg:w-[55%] text-pretty">
-          R Centric is a dedicated luxury property management service company
-          for short-term rentals of OMNIYAT residences, established under the
-          auspices of OMNIYAT LIV Property Management. Our all-inclusive
-          proposition ensures you maximise your return on investment while
-          maintaining market agility and accessibility.
+          R Centric is a software service company"
           <br /> <br />
           As an esteemed owner of an OMNIYAT residence, we introduce an
           opportunity to capitalise on the promising short-term rental market in

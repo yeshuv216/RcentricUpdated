@@ -43,24 +43,18 @@ const Layout = ({ children }) => {
           <link rel="icon" type="image/x-icon" href="/logo.svg" />
           <meta
             name="description"
-            content="R Centric is a dedicated luxury property management service company
-          for short-term rentals of OMNIYAT residences, established under the
-          auspices of OMNIYAT LIV Property Management."
+            content="R Centric is Software service company"
           />
           <meta property="og:title" content="R Centric" />
           <meta property="og:type" content="article" />
           <meta property="og:image" content="/logo.svg" />
           <meta
             name="twitter:card"
-            content="R Centric is a dedicated luxury property management service company
-          for short-term rentals of OMNIYAT residences, established under the
-          auspices of OMNIYAT LIV Property Management."
+            content="R Centric is a software service company"
           ></meta>
           <meta
             property="og:description"
-            content="R Centric is a dedicated luxury property management service company
-          for short-term rentals of OMNIYAT residences, established under the
-          auspices of OMNIYAT LIV Property Management."
+            content="R Centric is a software service company"
           ></meta>
           <meta property="og:site_name" content="R Centric" />
           <meta name="twitter:image:alt" content="R Centric"></meta>

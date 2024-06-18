@@ -337,19 +337,15 @@ Our content marketing services focus on creating high-quality, valuable content 
       </section>
 
       <HomeCarousel data={benefits} />
-      <div className="relative h-[20vh] lg:h-[95vh] w-100vw lg:w-[660px]">
-                <div className="h-[27vh] lg:h-[45vh]">
-                </div>
-                <div
-                  className="h-[23vh] lg:h-[20vh] bg-white border-x border-b border-[#E2E3DC] text-black text-center px-4
-                 lg:px-8 py-3.5 lg:py-6"
-                >
-                  <h1 className="font-bodoniModa text-xl lg:text-xl">
+      <section className="pt-16 lg:pt-28 mb-20 flex flex-col items-center pb-14 lg:pb-28 dataFadeContainer bg-[#373535]">
+      <div className="relative h-[5vh] lg:h-[5vh] w-100vw lg:w-[660px]">
+ 
+                  <h1 className="font-bodoniModa text-white text-xl lg:text-xl">
                     12+
                   </h1>
-                  <p className="para mt-2 lg:mt-4">Lorem Ipsum</p>
+                  <p className="para mt-2 lg:mt-4 text-white">Lorem Ipsum</p>
                 </div>
-                </div>
+                </section>
 {/* 
       <section className="pt-16 lg:pt-28 mt-10 lg:mt-20 flex flex-col items-center pb-14 lg:pb-28 dataFadeContainer bg-[#FAFAFA]">
         <h1 className="title text-center w-11/12 mx-auto">

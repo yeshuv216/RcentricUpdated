@@ -336,90 +336,13 @@ Our content marketing services focus on creating high-quality, valuable content 
       </section>
 
       <HomeCarousel data={benefits} />
-
-      <BenefitsExperiencesCarousel data={benefitExperiences} />
-
-      <div data-fade-up>
-      <div className="mt-12 lg:mt-24">
-        {/* <Image
-          src={"/img/opus-map.svg"}
-          height={1980}
-          width={1080}
-          alt="map"
-          className="w-screen h-full"
-        /> */}
-      </div>
-        <section className="grid place-items-center mt-16 lg:mt-36 container w-11/12">
-        <div className="h-[15vh] lg:h-[15vh]">
-                  <Image
-                    src={require('../../public/img/meDubai/meDubai.svg')}
-                    width={1920}
-                    height={1080}
-                    alt="beyond points"
-                    className="w-full h-full object-cover object-[50%_60%]"
-                  />
-                </div>
-          <p className="subtitle text-center">REWARDS AND PRIVILEGES</p>
-          <h1 className="title text-center mt-3">BEYOND POINTS</h1>
-          <p className="para text-center mt-4 w-full lg:w-[50%] text-pretty">
-            R Centric offers a gateway to a world of extraordinary benefits
-            through MeliáRewards program, designed to add an extra layer of
-            luxury to your lifestyle.
-          </p>
-        </section>
-        <div className="grid place-items-center pt-8 lg:pt-12 pb-16 lg:pb-28 container w-11/12">
-          <p className="subtitle text-center">MeliáRewards: Silver Owners</p>
-          <div className="para text-sm text-center mt-6 w-full lg:w-[35%] *:py-4">
-            <p>VIP Treatment</p>
-            <p className="border-t border-darkGreen border-opacity-15">
-              20% discount on the MeliáRewards rate
-            </p>
-            <p className="border-t border-darkGreen border-opacity-15">
-              15% discount on Food & Beverage and spas within Meliá Hotels
-              International managed outlets
-            </p>
-            <p className="border-t border-darkGreen border-opacity-15">
-              Unlimited nights
-            </p>
-            <p className="border-t border-darkGreen border-opacity-15">
-              Maximum of 5 rooms per stay
-            </p>
-          </div>
-          <Link href="/rewards-privileges" className="cta mt-12 lg:mt-20">
-            Explore More
-          </Link>
-        </div>
-      </div>
-
-      <div>
-        <Image
-          src="/img/asset10.webp"
-          width={1980}
-          height={2000}
-          alt="R Centric"
-          className="h-full w-full mb-0 lg:mb-12"
-        />
-        <h1 className="sticky bottom-0 w-full bg-white py-8 title text-center">
-          WELCOME TO A WORLD WHERE LUXURY <br /> MEETS LEGACY,AND EVERY STAY IS
-          AN <br />
-          EXQUISITE MEMORY.
-        </h1>
-      </div>
-
-      <div className="w-11/12 container flex justify-center -mt-2 relative ">
-        <p className="para text-center w-full lg:w-[50%] dataFadeTarget">
-          In crafting unforgettable experiences, R Centric stands as your
-          trusted partner, dedicated to maximising the potential of your OMNIYAT
-          residence.
-        </p>
-      </div>
-
+{/* 
       <section className="pt-16 lg:pt-28 mt-10 lg:mt-20 flex flex-col items-center pb-14 lg:pb-28 dataFadeContainer bg-[#FAFAFA]">
         <h1 className="title text-center w-11/12 mx-auto">
           Express Your Interest
         </h1>
         <BookingForm />
-      </section>
+      </section> */}
     </>
   );
 }

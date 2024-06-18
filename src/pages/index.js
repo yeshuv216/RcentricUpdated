@@ -76,22 +76,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Liv Reside</title>
+        <title>R Centric</title>
       </Head>
       <section className="relative">
-        <video
-          src="/videos/opus_H.mp4#t=0.1"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          poster="/img/banner_H.webp"
-          className="h-[100vh] w-screen object-cover object-center hidden sm:block"
-        >
-          <source src="/videos/opus_H.mp4#t=0.1" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <Image
+          src="/img/hero.png"
+          style={{width:'100%',height:'100%'}}
+          width={1300}
+          height={1000}
+          alt="benefits"
+          className="left-[45%]"
+        />
         <video
           src="/videos/opus_V.mp4"
           autoPlay
@@ -105,130 +100,239 @@ export default function Home() {
           <source src="/videos/opus_V.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-20 text-white w-full">
-          <p className="subtitle text-center text-white">
-            THE OPUS BY OMNIYAT
-          </p>
-          <h1 className="title text-center mt-3">
-            EXCLUSIVE PROPERTY MANAGEMENT
+        {/* <div className="absolute left-1/2 -translate-x-1/2 bottom-1/2 text-white w-full">
+          <h1 className="title text-center mt-1">
+          Crafting the future of brands with technology
           </h1>
-        </div>
-        <span className="hero__scrollTo">
-          <span className="text-xs tracking-little text-white uppercase absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap">
-            scroll down
-          </span>
-          <div className="line !h-[2.5rem]">
-            <div className="background"></div>
-            <div className="highlight"></div>
-          </div>
-        </span>
+        </div> */}
+      
       </section>
 
       <section
-        data-fade-up
+       
         className="grid place-items-center mt-16 lg:mt-24 container w-11/12"
       >
-        <p className="subtitle text-center">INTRODUCING</p>
-        <h1 className="title text-center mt-3">LIV RESIDE</h1>
+         <div className="h-[15vh] lg:h-[15vh]">
+                  <Image
+                    src={require('../../public/img/monogram.png')}
+                    width={106}
+                    height={106}
+                    alt="beyond points"
+                  />
+                </div>
+        <h1 className="title text-center mt-3">Engage Your Audience with Creative and  </h1>
+        <h1 className="title text-center mt-3">Compelling Content Marketing </h1>
         <p className="para text-center mt-4 w-full lg:w-[60%] text-pretty">
-          LIV Reside is a dedicated luxury property management service company
-          for short-term rentals of OMNIYAT residences, established under the
-          auspices of OMNIYAT LIV Property Management.
+Our content marketing services focus on creating high-quality, valuable content that
           <br /> <br />
-          LIV Reside offers you an all-inclusive proposition to ensure you
-          maximise your return on investment while maintaining market agility
-          and accessibility.
+          resonates with your audience, drives engagement, and builds brand authority.
           <br /> <br />
-          As an esteemed owner of an OMNIYAT residence, we introduce an
-          opportunity to capitalise on the promising short-term rental market in
-          Dubai.
         </p>
       </section>
 
-      <section
-        className="mt-40 lg:mt-36 bg-gray flex justify-center items-center relative"
-        ref={animateRef}
-      >
-        <div
-          id="opusImg"
-          className="h-[50vh] lg:h-screen relative flex justify-center items-end w-full"
-        >
-          <Image
-            ref={imgRef}
-            src="/img/asset6.webp"
-            width={1980}
-            height={2000}
-            alt="Liv Reside"
-            className="object-cover object-[60%_100%] lg:object-top h-full w-full"
-          />
-        </div>
-
-        <div className="absolute left-0 bottom-0 w-full pl-5 lg:pl-20 pb-6 lg:pb-14 pt-28 flex flex-col items-start gap-[10vh] lg:gap-[25vh] bg-gradient-to-t from-black/50 to-transparent">
-          <div className="flex flex-col items-start" data-fade-up>
-            <p className="subtitle text-white uppercase text-sm lg:text-base">
-              The Opus by OMNIYAT
-            </p>
-            <h1 className="title text-white mt-3 text-left lg:text-center">
-              ENHANCE YOUR INVESTMENT
-            </h1>
-          </div>
-        </div>
-      </section>
-
-      <div className="bg-[#FAFAFA]">
-        <section className="container w-11/12 pt-16 lg:pt-36 flex flex-col lg:flex-row items-end gap-8 lg:gap-10 pb-10 lg:pb-20">
-          <div className="w-full lg:w-[55%] overflow-hidden">
+      <div className="bg-[#ffffff]">
+        <section className="container w-11/12 pt-16 lg:pt16 flex flex-col lg:flex-row items-center gap-8 lg:gap-10 pb-1 lg:pb-0">
+          <div className=" left-1/4 lg:w-[50%]">
             <Image
-              src="/img/asset8.webp"
-              width={1980}
-              height={2000}
-              alt="Liv Reside"
-              className="object-cover object-center h-full w-full img-zooming scale-150"
+              src="/img/companylist.png"
+              width={1700}
+              height={100}
+              alt="R Centric"
+              style={{objectFit:'contain',marginLeft:'47%'}}
+              // className="object-fit object-center h-full w-full img-zooming scale-150"
             />
-          </div>
-          <div
-            className="w-full lg:w-[45%] flex flex-col justify-end h-full lg:pr-14"
-            data-fade-up
-          >
-            <p className="subtitle text-left">The OPUS RESIDENCES</p>
-            <h1 className="title text-left whitespace-nowrap mt-2">
-              Beyond Luxury <br /> Residences
-            </h1>
-            <p className="para lg:mb-10 mt-4">
-              As the homeowner of a residence at The Opus, embrace LIV
-              Reside&lsquo;s exclusive benefits to turn your residence into an
-              asset. Whether generating rental income, professional property
-              management, or offering a world-class experience, LIV Reside
-              maximises your residence&lsquo;s value for optimal return on
-              investment.
-            </p>
           </div>
         </section>
       </div>
-
+<div>
+      <section  className="relative" style={{marginTop:30}}>
+      <video
+          style={{filter:"brightness('30%')"}}
+          src="/videos1/1.mp4#t=0.1"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/img/banner_H.webp"
+          className="h-[60vh] w-screen object-cover object-center hidden sm:block"
+        >
+          <source src="/videos1/1.mp4#t=0.1" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video
+          src="/videos1/1.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/img/banner_V.webp"
+          className="sm:hidden h-svh w-screen object-cover"
+        >
+          <source src="/videos1/1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-1/2 text-white w-full">
+          <h1 className="title text-center mt-1">
+          Branding
+          </h1>
+          <p className="para text-center mt-4 w-full lg:w-[100%] text-white">
+          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          <br /> <br />
+          standard dummy text ever since the 1500s,
+          <br /> <br />
+        </p>
+        </div>
+      
+      </section>
+      <section  className="relative">
+      <video
+          style={{filter:"brightness('30%')"}}
+          src="/videos1/2.mp4#t=0.1"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/img/banner_H.webp"
+          className="h-[60vh] w-screen object-cover object-center hidden sm:block"
+        >
+          <source src="/videos1/2.mp4#t=0.1" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video
+          src="/videos1/2.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/img/banner_V.webp"
+          className="sm:hidden h-svh w-screen object-cover"
+        >
+          <source src="/videos1/2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-1/2 text-white w-full">
+          <h1 className="title text-center mt-1">
+          Digital Marketing
+          </h1>
+          <p className="para text-center mt-4 w-full lg:w-[100%] text-white">
+          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          <br /> <br />
+          standard dummy text ever since the 1500s,
+          <br /> <br />
+        </p>
+        </div>
+      
+      </section>
+      <section  className="relative">
+      <video
+          style={{filter:"brightness('30%')"}}
+          src="/videos1/3.mp4#t=0.1"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/img/banner_H.webp"
+          className="h-[60vh] w-screen object-cover object-center hidden sm:block"
+        >
+          <source src="/videos1/3.mp4#t=0.1" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video
+          src="/videos1/3.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/img/banner_V.webp"
+          className="sm:hidden h-svh w-screen object-cover"
+        >
+          <source src="/videos1/3.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-1/2 text-white w-full">
+          <h1 className="title text-center mt-1">
+          IT Consulting
+          </h1>
+          <p className="para text-center mt-4 w-full lg:w-[100%] text-white">
+          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          <br /> <br />
+          standard dummy text ever since the 1500s,
+          <br /> <br />
+        </p>
+        </div>
+      
+      </section>
+      <section  className="relative">
+      <video
+          style={{filter:"brightness('30%')"}}
+          src="/videos1/2.mp4#t=0.1"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/img/banner_H.webp"
+          className="h-[60vh] w-screen object-cover object-center hidden sm:block"
+        >
+          <source src="/videos1/2.mp4#t=0.1" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video
+          src="/videos1/2.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster="/img/banner_V.webp"
+          className="sm:hidden h-svh w-screen object-cover"
+        >
+          <source src="/videos1/2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-1/2 text-white w-full">
+          <h1 className="title text-center mt-1">
+          Automation
+          </h1>
+          <p className="para text-center mt-4 w-full lg:w-[100%] text-white">
+          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          <br /> <br />
+          standard dummy text ever since the 1500s,
+          <br /> <br />
+        </p>
+        </div>
+      
+      </section>
+      </div>
       <section className="lg:hidden">
         <Image
           src="/img/asset4.webp"
           width={1980}
           height={2000}
-          alt="Liv Reside"
+          alt="R Centric"
           className="object-cover object-center h-full w-full"
         />
       </section>
 
       <section
         data-fade-up
-        className="grid place-items-center mt-16 lg:mt-28 container w-11/12"
+        className="grid place-items-center mt-16 lg:mt-8 container w-11/12"
       >
-        <p className="subtitle text-center">ENJOY</p>
         <h1 className="title text-center mt-3 whitespace-nowrap">
-          IMMEDIATE BENEFITS
+        Featured Projects
         </h1>
-        <p className="para text-center mt-4 w-full lg:w-[50%] text-pretty">
-          LIV Reside goes beyond standard property management with exclusive
-          benefits tailored to enhance every aspect of your property ownership
-          journey.
-        </p>
+        <p className="para text-center mt-4 w-full lg:w-[100%] text-black">
+          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          <br /> <br />
+          standard dummy text ever since the 1500s,
+          <br /> <br />
+          </p>
       </section>
 
       <HomeCarousel data={benefits} />
@@ -237,13 +341,13 @@ export default function Home() {
 
       <div data-fade-up>
       <div className="mt-12 lg:mt-24">
-        <Image
+        {/* <Image
           src={"/img/opus-map.svg"}
           height={1980}
           width={1080}
           alt="map"
           className="w-screen h-full"
-        />
+        /> */}
       </div>
         <section className="grid place-items-center mt-16 lg:mt-36 container w-11/12">
         <div className="h-[15vh] lg:h-[15vh]">
@@ -258,7 +362,7 @@ export default function Home() {
           <p className="subtitle text-center">REWARDS AND PRIVILEGES</p>
           <h1 className="title text-center mt-3">BEYOND POINTS</h1>
           <p className="para text-center mt-4 w-full lg:w-[50%] text-pretty">
-            LIV Reside offers a gateway to a world of extraordinary benefits
+            R Centric offers a gateway to a world of extraordinary benefits
             through MeliáRewards program, designed to add an extra layer of
             luxury to your lifestyle.
           </p>
@@ -292,7 +396,7 @@ export default function Home() {
           src="/img/asset10.webp"
           width={1980}
           height={2000}
-          alt="Liv Reside"
+          alt="R Centric"
           className="h-full w-full mb-0 lg:mb-12"
         />
         <h1 className="sticky bottom-0 w-full bg-white py-8 title text-center">
@@ -304,7 +408,7 @@ export default function Home() {
 
       <div className="w-11/12 container flex justify-center -mt-2 relative ">
         <p className="para text-center w-full lg:w-[50%] dataFadeTarget">
-          In crafting unforgettable experiences, LIV Reside stands as your
+          In crafting unforgettable experiences, R Centric stands as your
           trusted partner, dedicated to maximising the potential of your OMNIYAT
           residence.
         </p>

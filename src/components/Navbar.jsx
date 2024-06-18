@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "./icons/Logo";
+import Image from "next/image";
 import { useContext, useEffect, useRef, useState } from "react";
 import { useWindowScroll } from "react-use";
 import { useRouter } from "next/router";
@@ -136,73 +136,33 @@ const Navbar = () => {
           <Link
             href={"/"}
             aria-label="Home"
-            className="absolute top-[55%] lg:top-1/2 left-[68px] lg:left-1/2 lg:-translate-x-1/2 -translate-y-1/2 lg:hidden"
+            className="absolute top-[75%] lg:top-1/2 left-[68px] lg:left-1/2 lg:-translate-x-1/2 -translate-y-1/2 lg:hidden"
           >
-            <Logo className="size-[4.5rem] lg:size-24" />
+             <Image
+          src="/img/logo.png"
+          height={30}
+          width={100}
+          alt="benefits"
+          className="h-svh lg:h-screen w-screen object-cover object-center"
+        />
           </Link>
 
-          <div className="hidden lg:flex">
-            <Link
+          <div style={{marginTop:25,alignSelf:'center'}} className="hidden lg:flex">
+            {/* <Link
               href={"/"}
               aria-label="home"
-              className="absolute top-1/2 left-[68px] -translate-y-1/2"
+              className="absolute top-1/1 left-[45%]  -translate-y-1/2"
             >
-              <Logo className="size-[90px]" />
-            </Link>
-
-            <div className={"flex gap-10 ml-[140px] text-sm *:py-6"}>
-              <Link
-                href="/about-us"
-                className={cn(
-                  router.pathname === "/about-us"
-                    ? `border-b ${
-                        bgCol || (!bgCol && scrolled)
-                          ? "border-black"
-                          : "border-white"
-                      } font-normal`
-                    : "border-none font-light"
-                )}
-              >
-                About us
-              </Link>
-              <Link
-                href="/benefits"
-                className={cn(
-                  router.pathname === "/benefits"
-                    ? `border-b ${
-                        bgCol || (!bgCol && scrolled)
-                          ? "border-black"
-                          : "border-white"
-                      } font-normal`
-                    : "border-none font-light"
-                )}
-              >
-                Benefits
-              </Link>
-              <Link
-                href="/rewards-privileges"
-                className={cn(
-                  router.pathname === "/rewards-privileges"
-                    ? `border-b ${
-                        bgCol || (!bgCol && scrolled)
-                          ? "border-black"
-                          : "border-white"
-                      } font-normal`
-                    : "border-none font-light"
-                )}
-              >
-                Rewards & Privileges
-              </Link>
-            </div>
+              <Image
+          src="/img/logo.png"
+          height={30}
+          width={100}
+          alt="benefits"
+          className="left-[45%]"
+        />
+            </Link> */}
+            
           </div>
-          <button
-            onClick={() => setIsFromOpen(true)}
-            className={`${
-              bgCol || (!bgCol && scrolled) ? "border-black" : "border-white"
-            }   h-10 w-32 -mr-2 lg:mr-0 text-[0.625rem] lg:text-xs lg:h-10 tracking-widest lg:tracking-wider lg:w-36 uppercase border-[0.5px] font-medium `}
-          >
-            Register Interest
-          </button>
         </div>
       </nav>
       <div

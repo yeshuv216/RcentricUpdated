@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <main>
       <Head>
-        <title>Liv Reside | About Us</title>
+        <title>R Centric | About Us</title>
       </Head>
       <section className="relative">
         <Image
@@ -21,9 +21,9 @@ const AboutUs = () => {
         data-fade-up
         className="grid place-items-center mt-16 lg:mt-24 container w-11/12"
       >
-        <h1 className="title text-center">Introducing LIV Reside</h1>
+        <h1 className="title text-center">Introducing R Centric</h1>
         <p className="para text-center mt-6 lg:mt-8 w-full lg:w-[55%] text-pretty">
-          LIV Reside is a dedicated luxury property management service company
+          R Centric is a dedicated luxury property management service company
           for short-term rentals of OMNIYAT residences, established under the
           auspices of OMNIYAT LIV Property Management. Our all-inclusive
           proposition ensures you maximise your return on investment while
@@ -31,7 +31,7 @@ const AboutUs = () => {
           <br /> <br />
           As an esteemed owner of an OMNIYAT residence, we introduce an
           opportunity to capitalise on the promising short-term rental market in
-          Dubai. In crafting unforgettable experiences, LIV Reside stands as
+          Dubai. In crafting unforgettable experiences, R Centric stands as
           your trusted partner, dedicated to maximising the potential of your
           OMNIYAT residence.
         </p>

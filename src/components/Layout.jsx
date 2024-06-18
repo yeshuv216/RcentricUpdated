@@ -43,27 +43,27 @@ const Layout = ({ children }) => {
           <link rel="icon" type="image/x-icon" href="/logo.svg" />
           <meta
             name="description"
-            content="LIV Reside is a dedicated luxury property management service company
+            content="R Centric is a dedicated luxury property management service company
           for short-term rentals of OMNIYAT residences, established under the
           auspices of OMNIYAT LIV Property Management."
           />
-          <meta property="og:title" content="Liv Reside" />
+          <meta property="og:title" content="R Centric" />
           <meta property="og:type" content="article" />
           <meta property="og:image" content="/logo.svg" />
           <meta
             name="twitter:card"
-            content="LIV Reside is a dedicated luxury property management service company
+            content="R Centric is a dedicated luxury property management service company
           for short-term rentals of OMNIYAT residences, established under the
           auspices of OMNIYAT LIV Property Management."
           ></meta>
           <meta
             property="og:description"
-            content="LIV Reside is a dedicated luxury property management service company
+            content="R Centric is a dedicated luxury property management service company
           for short-term rentals of OMNIYAT residences, established under the
           auspices of OMNIYAT LIV Property Management."
           ></meta>
-          <meta property="og:site_name" content="Liv Reside" />
-          <meta name="twitter:image:alt" content="Liv Reside"></meta>
+          <meta property="og:site_name" content="R Centric" />
+          <meta name="twitter:image:alt" content="R Centric"></meta>
         </Head>
         {router.pathname !== "/thankyou" ? (
           <>

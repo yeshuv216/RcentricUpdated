@@ -53,18 +53,6 @@ const HomeCarousel = ({ data }) => {
               </div>
             </SwiperSlide>
           ))}
-
-          <div className="swiper-scrollbar"></div>
-          <div
-            className={
-              "absolute left-0 z-10 flex w-full justify-end -bottom-2 lg:pr-[10vw]"
-            }
-          >
-            <div className="flex gap-8 pr-4 lg:gap-6 lg:pr-16">
-              <NavigationArrowIcon className="image-swiper-button-prev size-7 cursor-pointer stroke-[1px] text-black lg:stroke-[2px] rotate-180" />
-              <NavigationArrowIcon className="image-swiper-button-next size-7  cursor-pointer stroke-[1px] text-black lg:stroke-[2px]" />
-            </div>
-          </div>
         </Swiper>
       </div>
     </>

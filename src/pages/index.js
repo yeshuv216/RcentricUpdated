@@ -178,7 +178,7 @@ Our content marketing services focus on creating high-quality, valuable content 
           Branding
           </h1>
           <p className="para text-center mt-4 w-full lg:w-[100%] text-white">
-          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`&apos;`s
           <br /> <br />
           standard dummy text ever since the 1500s,
           <br /> <br />
@@ -219,7 +219,7 @@ Our content marketing services focus on creating high-quality, valuable content 
           Digital Marketing
           </h1>
           <p className="para text-center mt-4 w-full lg:w-[100%] text-white">
-          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`&apos;`s
           <br /> <br />
           standard dummy text ever since the 1500s,
           <br /> <br />
@@ -260,7 +260,7 @@ Our content marketing services focus on creating high-quality, valuable content 
           IT Consulting
           </h1>
           <p className="para text-center mt-4 w-full lg:w-[100%] text-white">
-          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`&apos;`s
           <br /> <br />
           standard dummy text ever since the 1500s,
           <br /> <br />
@@ -301,7 +301,7 @@ Our content marketing services focus on creating high-quality, valuable content 
           Automation
           </h1>
           <p className="para text-center mt-4 w-full lg:w-[100%] text-white">
-          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`&apos;`s
           <br /> <br />
           standard dummy text ever since the 1500s,
           <br /> <br />
@@ -328,7 +328,7 @@ Our content marketing services focus on creating high-quality, valuable content 
         Featured Projects
         </h1>
         <p className="para text-center mt-4 w-full lg:w-[100%] text-black">
-          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          Copyright Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`&apos;`s
           <br /> <br />
           standard dummy text ever since the 1500s,
           <br /> <br />
@@ -336,6 +336,7 @@ Our content marketing services focus on creating high-quality, valuable content 
       </section>
 
       <HomeCarousel data={benefits} />
+      
 {/* 
       <section className="pt-16 lg:pt-28 mt-10 lg:mt-20 flex flex-col items-center pb-14 lg:pb-28 dataFadeContainer bg-[#FAFAFA]">
         <h1 className="title text-center w-11/12 mx-auto">

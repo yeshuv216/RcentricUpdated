@@ -140,6 +140,8 @@ input[type="number"] {
   transition: top 0.6s;
 }
 
+
+
 #navbar.animate {
   top: -94px;
 }
@@ -184,6 +186,7 @@ input[type="number"] {
   transform: var(--tw-transform);
 }
 
+
 .hero__scrollTo .line {
   position: relative;
   z-index: 1;
@@ -211,6 +214,10 @@ input[type="number"] {
   transform-origin: 0 100%;
   -webkit-animation: passingLine 2s linear infinite;
   animation: passingLine 2s linear infinite;
+}
+
+.horizontal{
+  display: flex;
 }
 
 @keyframes passingLine {

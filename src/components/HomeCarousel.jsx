@@ -9,7 +9,7 @@ const HomeCarousel = ({ data }) => {
       <div className="bg-[#FAFAFA] pb-12 lg:pb-24 mt-12 lg:mt-24 pt-14 lg:pt-24">
         <Swiper
           modules={[Navigation, Scrollbar]}
-          className="h-[48vh] lg:h-[105vh] relative !pl-[16px] lg:!pl-[68px] homeCarousel"
+          className="h-[48vh] lg:h-[45vh] relative !pl-[16px] lg:!pl-[68px] homeCarousel"
           speed={1000}
           slidesPerView={"auto"}
           navigation={{

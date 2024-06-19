@@ -125,8 +125,8 @@ const Navbar = () => {
           "top-0 z-[50] flex w-screen flex-row items-center"
         )}
       >
-        <div className="container flex items-center justify-between px-4 pr-5 lg:px-16 py-2.5 lg:py-0 relative">
-          <div className="flex items-center gap-5 lg:hidden">
+        <div className="container flex items-center justify-between px-4 pr-5 lg:px-16 py-2.5 lg:py-0 relative background-[#E2E3DC]">
+          <div className="flex items-center gap-5 lg">
             <HamburgerIcon
               className=" size-6 cursor-pointer"
               onClick={() => openSidebar()}
@@ -140,27 +140,27 @@ const Navbar = () => {
           >
              <Image
           src="/img/logo.png"
-          height={30}
-          width={100}
+          height={50}
+          width={200}
           alt="benefits"
           className="h-svh lg:h-screen w-screen object-cover object-center"
         />
           </Link>
 
           <div style={{marginTop:25,alignSelf:'center'}} className="hidden lg:flex">
-            {/* <Link
+            <Link
               href={"/"}
               aria-label="home"
               className="absolute top-1/1 left-[45%]  -translate-y-1/2"
             >
               <Image
           src="/img/logo.png"
-          height={30}
-          width={100}
+          height={50}
+          width={150}
           alt="benefits"
           className="left-[45%]"
         />
-            </Link> */}
+            </Link>
             
           </div>
         </div>

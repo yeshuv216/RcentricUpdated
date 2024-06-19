@@ -66,19 +66,19 @@ html.lenis {
   }
 
   .inputLabel {
-    @apply text-xs lg:text-sm text-[#4D4F52] tracking-wider font-light;
+    @apply text-xs lg:text-sm text-[#fff] tracking-wider font-light;
   }
 
   .inputLabel2 {
-    @apply text-xs text-[#4D4F52] tracking-wider font-light;
+    @apply text-xs text-[#fff] tracking-wider font-light;
   }
 
   .inputItem {
-    @apply placeholder:text-grey pl-2 lg:pl-4 py-2.5 lg:py-3.5 text-sm w-full bg-[#F5F5F5];
+    @apply placeholder:text-white pl-10 lg:pl-4 py-2.5 lg:py-3.5 text-sm w-full bg-[#000];
   }
 
   .inputItem2 {
-    @apply placeholder:text-grey pl-2 py-2.5 w-full bg-[#F5F5F5] text-xs lg:text-sm;
+    @apply placeholder:text-white  pl-10 py-2.5 w-full bg-[#000] text-xs lg:text-sm;
   }
 
   .greenCta {

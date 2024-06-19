@@ -120,8 +120,8 @@ const Navbar = () => {
         className={cn(
           "fixed",
           bgCol || (!bgCol && scrolled)
-            ? "bg-white text-black shadow-lg"
-            : "bg-transparent text-white",
+            ? "transparent ext-black shadow-lg"
+            : "transparent text-black",
           "top-0 z-[50] flex w-screen flex-row items-center"
         )}
       >

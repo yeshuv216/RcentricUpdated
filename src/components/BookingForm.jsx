@@ -100,8 +100,8 @@ const BookingForm = ({ isSideForm = false }) => {
       className={cn(
         "flex flex-col ",
         isSideForm
-          ? "w-full gap-4 lg:gap-3 mt-6 lg:mt-10"
-          : "w-11/12 lg:w-[60%] gap-4 lg:gap-8 mt-12"
+          ? "w-full gap-2 lg:gap-2 mt-6 lg:mt-10"
+          : "w-11/12 lg:w-[27%] gap-4 lg:gap-8 mt-12"
       )}
     >
       <div
@@ -124,7 +124,7 @@ const BookingForm = ({ isSideForm = false }) => {
             id="firstName"
             value={formValues.firstName}
             onChange={handleChange}
-            className={cn(isSideForm ? "inputItem2" : "inputItem")}
+            className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}
           />
         </div>
 
@@ -142,12 +142,46 @@ const BookingForm = ({ isSideForm = false }) => {
             id="lastName"
             value={formValues.lastName}
             onChange={handleChange}
-            className={cn(isSideForm ? "inputItem2" : "inputItem")}
+            className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}
           />
         </div>
       </div>
 
-      <div className={cn(isSideForm ? "inputContainer2" : "inputContainer")}>
+      <div
+        className={
+          isSideForm
+            ? "flex lg:grid lg:grid-cols-1 gap-5"
+            : "flex lg:grid lg:grid-cols-2 gap-5"
+        }
+      >
+        <div
+          className={cn(
+            isSideForm ? "inputContainer2" : "inputContainer",
+            "w-[35%] lg:w-full"
+          )}
+        >
+          <label
+            htmlFor="phone"
+            className={cn(isSideForm ? "inputLabel2" : "inputLabel")}
+          >
+            Phone*
+          </label>
+          <input
+            required
+            type="number"
+            name="phone"
+            id="phone"
+            value={formValues.phone}
+            onChange={handleChange}
+            className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}
+          />
+       </div>
+       <div
+          className={cn(
+            isSideForm ? "inputContainer2" : "inputContainer",
+            "w-[35%] lg:w-full"
+          )}
+        >
         <label
           htmlFor="email"
           className={cn(isSideForm ? "inputLabel2" : "inputLabel")}
@@ -161,8 +195,9 @@ const BookingForm = ({ isSideForm = false }) => {
           id="email"
           value={formValues.email}
           onChange={handleChange}
-          className={cn(isSideForm ? "inputItem2" : "inputItem")}
+          className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}
         />
+        </div>
       </div>
 
       <div
@@ -192,7 +227,7 @@ const BookingForm = ({ isSideForm = false }) => {
                 type="button"
                 {...rootProps}
                 className={cn(
-                  "relative flex items-center bg-[#F5F5F5] w-full text-sm",
+                  "relative flex items-center bg-[#000] w-full text-sm",
                   isSideForm
                     ? "py-1.5 lg:py-2 pl-2 text-xs lg:text-sm"
                     : "py-2 lg:py-3 pl-2 lg:pl-4 "
@@ -214,28 +249,6 @@ const BookingForm = ({ isSideForm = false }) => {
           />
         </div>
 
-        <div
-          className={cn(
-            isSideForm ? "inputContainer2" : "inputContainer",
-            "w-[65%] lg:w-full"
-          )}
-        >
-          <label
-            htmlFor="phone"
-            className={cn(isSideForm ? "inputLabel2" : "inputLabel")}
-          >
-            Phone Number*
-          </label>
-          <input
-            required
-            type="number"
-            name="phone"
-            id="phone"
-            value={formValues.phone}
-            onChange={handleChange}
-            className={cn(isSideForm ? "inputItem2" : "inputItem")}
-          />
-        </div>
       </div>
 
       <div className={cn(isSideForm ? "inputContainer2" : "inputContainer")}>
@@ -243,18 +256,17 @@ const BookingForm = ({ isSideForm = false }) => {
           htmlFor="buildingName"
           className={cn(isSideForm ? "inputLabel2" : "inputLabel")}
         >
-          Building Name*
+          Interested In*
         </label>
         <select
           name="buildingName"
           id="buildingName"
-          className={cn(isSideForm ? "inputItem2" : "inputItem")}
+          className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[500px] w-[500px]" : "inputItem border-b-2 border-white-500 lg:w-[500px] w-[500px]")}
           value={formValues.buildingName}
           onChange={handleChange}
           required
         >
           <option value=""></option>
-          <option value="The OPUS by OMNIYAT">The OPUS by OMNIYAT </option>
         </select>
       </div>
 
@@ -263,22 +275,16 @@ const BookingForm = ({ isSideForm = false }) => {
           htmlFor="propertyType"
           className={cn(isSideForm ? "inputLabel2" : "inputLabel")}
         >
-          Property Type*
+         Type Your Message
         </label>
         <select
           name="propertyType"
           id="propertyType"
-          className={cn(isSideForm ? "inputItem2" : "inputItem")}
+          className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[500px] w-[500px]" : "inputItem border-b-2 border-white-500 lg:w-[500px] w-[500px]")}
           value={formValues.propertyType}
           onChange={handleChange}
           required
         >
-          <option value=""></option>
-          <option value="Studio">Studio</option>
-          <option value="1BR Apartment">1BR Apartment</option>
-          <option value="2BR Apartment">2BR Apartment</option>
-          <option value="3BR Apartment">3BR Apartment</option>
-          <option value="Penthouse">Penthouse</option>
         </select>
       </div>
 

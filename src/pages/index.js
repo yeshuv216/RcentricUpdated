@@ -443,13 +443,13 @@ Our content marketing services focus on creating high-quality, valuable content 
                 </div>
 
               </div>
-{/* 
-      <section className="pt-16 lg:pt-28 mt-10 lg:mt-20 flex flex-col items-center pb-14 lg:pb-28 dataFadeContainer bg-[#FAFAFA]">
-        <h1 className="title text-center w-11/12 mx-auto">
-          Express Your Interest
+
+      <section className="pt-16 lg:pt-28 mt-5 lg:mt-5 flex flex-col items-center pb-14 lg:pb-28 dataFadeContainer bg-[#000000]">
+        <h1 className="title text-center text-white  w-11/12 mx-auto">
+        Have a Project in Mind
         </h1>
         <BookingForm />
-      </section> */}
+      </section>
     </>
   );
 }

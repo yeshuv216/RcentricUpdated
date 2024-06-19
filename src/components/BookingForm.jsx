@@ -173,7 +173,7 @@ const BookingForm = ({ isSideForm = false }) => {
             id="phone"
             value={formValues.phone}
             onChange={handleChange}
-            className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}
+            className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}
           />
        </div>
        <div

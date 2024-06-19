@@ -23,7 +23,7 @@ const AboutUs = () => {
       >
         <h1 className="title text-center">Introducing R Centric</h1>
         <p className="para text-center mt-6 lg:mt-8 w-full lg:w-[55%] text-pretty">
-          R Centric is a software service company"
+          R Centric is a software service company
           <br /> <br />
           As an esteemed owner of an OMNIYAT residence, we introduce an
           opportunity to capitalise on the promising short-term rental market in

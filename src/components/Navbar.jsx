@@ -192,14 +192,14 @@ const Navbar = () => {
                 HOME
               </p>
               <p
-                onClick={() => navigate("/about-us")}
+                //onClick={() => navigate("/about-us")}
                 className={cn(
                   router.pathname === "/about-us"
                     ? "text-white"
                     : "text-[#CBCBCB] hover:text-white"
                 )}
               >
-                ABOUT US
+                Who we are
               </p>
               <p
                 onClick={() => navigate("/benefits")}
@@ -209,21 +209,21 @@ const Navbar = () => {
                     : "text-[#CBCBCB] hover:text-white"
                 )}
               >
-                Benefits
+                Services
               </p>
               <p
-                onClick={() => navigate("/rewards-privileges")}
+                //onClick={() => navigate("/rewards-privileges")}
                 className={cn(
                   router.pathname === "/rewards-privileges"
                     ? "text-white"
                     : "text-[#CBCBCB] hover:text-white"
                 )}
               >
-                Rewards & Privileges
+                Portfolio
               </p>
 
               <p
-                onClick={() => navigate("/faqs")}
+                //onClick={() => navigate("/faqs")}
                 className={cn(
                   router.pathname === "/faqs"
                     ? "text-white"
@@ -231,10 +231,10 @@ const Navbar = () => {
                   "text-sm lg:text-base mt-6"
                 )}
               >
-                FAQ
+                Blogs
               </p>
               <p
-                onClick={() => navigate("/contact-us")}
+               // onClick={() => navigate("/contact-us")}
                 className={cn(
                   router.pathname === "/contact-us"
                     ? "text-white"
@@ -242,7 +242,18 @@ const Navbar = () => {
                   "text-sm lg:text-base -mt-3 lg:-mt-5"
                 )}
               >
-                Contact Us
+                Contact 
+              </p>
+              <p
+                //onClick={() => navigate("/contact-us")}
+                className={cn(
+                  router.pathname === "/contact-us"
+                    ? "text-white"
+                    : "text-[#CBCBCB] hover:text-white",
+                  "text-sm lg:text-base -mt-3 lg:-mt-5"
+                )}
+              >
+                Carrer 
               </p>
             </div>
           </div>

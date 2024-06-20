@@ -114,7 +114,7 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <div>
       <nav
         id="navbar"
         className={cn(
@@ -125,10 +125,10 @@ const Navbar = () => {
           "top-0 z-[50] flex w-screen flex-row items-center"
         )}
       >
-        <div className="container flex items-center justify-between px-4 pr-5 lg:px-16 py-2.5 lg:py-0 relative background-[#E2E3DC]">
+        <div className="container flex items-center justify-between px-4 pr-5 lg:px-16 py-2.5 lg:py-0 relative">
           <div className="flex items-center gap-5 lg">
             <HamburgerIcon
-              className=" size-6 cursor-pointer"
+              className=" size-8 cursor-pointer"
               onClick={() => openSidebar()}
             />
           </div>
@@ -136,7 +136,7 @@ const Navbar = () => {
           <Link
             href={"/"}
             aria-label="Home"
-            className="absolute top-[75%] lg:top-1/2 left-[68px] lg:left-1/2 lg:-translate-x-1/2 -translate-y-1/2 lg:hidden"
+            className="absolute top-[75%] lg:top-1/1 left-[68px] lg:left-1/2 lg:-translate-x-1/2 -translate-y-1/2 lg:hidden"
           >
              <Image
           src="/img/logo.png"
@@ -147,7 +147,7 @@ const Navbar = () => {
         />
           </Link>
 
-          <div style={{marginTop:25,alignSelf:'center'}} className="hidden lg:flex">
+          <div style={{marginTop:2,alignSelf:'center'}} className="hidden lg:flex">
             <Link
               href={"/"}
               aria-label="home"
@@ -156,7 +156,7 @@ const Navbar = () => {
               <Image
           src="/img/logo.png"
           height={50}
-          width={150}
+          width={80}
           alt="benefits"
           className="left-[45%]"
         />
@@ -168,13 +168,22 @@ const Navbar = () => {
       <div
         ref={sidebarWrapper}
         className={cn(
-          "fixed top-0 h-screen -left-full w-screen lg:w-[45vw] bg-black/40 z-[50] backdrop-blur-lg text-white ease-in-out"
+          "fixed top-0 h-screen -left-full w-screen lg:w-[45vw] bg-white/100 z-[50]  text-black ease-in-out"
         )}
       >
+        <div className="horizontal space-between">
         <XMarkIcon
           className="size-6 absolute left-[5%] lg:left-[20%] top-4 lg:top-6 cursor-pointer"
           onClick={() => closeSidebar()}
         />
+        <Image
+          src="/img/logo.png"
+          height={10}
+          width={150}
+          alt="benefits"
+          className="absolute left-[5%] lg:left-[70%] top-4 lg:top-2 cursor-pointer"
+        />       
+        </div>
         <div className="flex flex-col justify-center items-end h-full uppercase">
           <div className="w-[85%] lg:w-[80%] relative">
             <div
@@ -185,18 +194,18 @@ const Navbar = () => {
                 onClick={() => navigate("/")}
                 className={cn(
                   router.pathname === "/"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white"
+                    ? "text-black"
+                    : "text-[#CBCBCB] hover:#014F54"
                 )}
               >
                 HOME
               </p>
               <p
-                //onClick={() => navigate("/about-us")}
+                onClick={() => navigate("/about-us")}
                 className={cn(
                   router.pathname === "/about-us"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white"
+                    ? "text-black"
+                    : "text-[#CBCBCB] hover:#014F54"
                 )}
               >
                 Who we are
@@ -205,8 +214,8 @@ const Navbar = () => {
                 onClick={() => navigate("/benefits")}
                 className={cn(
                   router.pathname === "/benefits"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white"
+                    ? "text-black"
+                    : "text-[#CBCBCB] hover:#014F54"
                 )}
               >
                 Services
@@ -215,8 +224,8 @@ const Navbar = () => {
                 //onClick={() => navigate("/rewards-privileges")}
                 className={cn(
                   router.pathname === "/rewards-privileges"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white"
+                    ? "text-black"
+                    : "text-[#CBCBCB] hover:#014F54"
                 )}
               >
                 Portfolio
@@ -226,8 +235,8 @@ const Navbar = () => {
                 //onClick={() => navigate("/faqs")}
                 className={cn(
                   router.pathname === "/faqs"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white ",
+                    ? "text-black"
+                    : "text-[#CBCBCB] hover:#014F54",
                   "text-sm lg:text-base mt-6"
                 )}
               >
@@ -237,8 +246,8 @@ const Navbar = () => {
                // onClick={() => navigate("/contact-us")}
                 className={cn(
                   router.pathname === "/contact-us"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white",
+                    ? "text-black"
+                    : "text-[#CBCBCB] hover:#014F54",
                   "text-sm lg:text-base -mt-3 lg:-mt-5"
                 )}
               >
@@ -248,8 +257,8 @@ const Navbar = () => {
                 //onClick={() => navigate("/contact-us")}
                 className={cn(
                   router.pathname === "/contact-us"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white",
+                    ? "text-black"
+                    : "text-[#CBCBCB] hover:#014F54",
                   "text-sm lg:text-base -mt-3 lg:-mt-5"
                 )}
               >
@@ -259,7 +268,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

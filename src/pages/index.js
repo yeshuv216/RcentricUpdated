@@ -82,6 +82,7 @@ export default function Home() {
 
       <section  className="relative">
       <video
+          id="video"
           style={{filter:"brightness('30%')"}}
           src="/videos1/3.mp4#t=0.1"
           autoPlay
@@ -90,12 +91,13 @@ export default function Home() {
           playsInline
           preload="none"
           poster="/img/banner_H.webp"
-          className="h-[90vh] w-screen object-cover object-center hidden sm:block"
+          className="h-[100vh] w-screen object-cover object-center hidden sm:block"
         >
           <source src="/videos1/3.mp4#t=0.1" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <video
+          id="video"
           src="/videos1/3.mp4"
           autoPlay
           muted
@@ -117,7 +119,7 @@ export default function Home() {
       </section>
 
       <section
-       
+        data-fade-up
         className="grid place-items-center mt-16 lg:mt-24 container w-11/12"
       >
          <div className="h-[15vh] lg:h-[15vh]">
@@ -139,7 +141,7 @@ Our content marketing services focus on creating high-quality, valuable content 
       </section>
 
       <div className="bg-[#ffffff]">
-        <section className="container w-11/12 pt-16 lg:pt16 flex flex-col lg:flex-row items-center gap-8 lg:gap-10 pb-1 lg:pb-0">
+        <section ref={animateRef} className="container w-11/12 pt-16 lg:pt16 flex flex-col lg:flex-row items-center gap-8 lg:gap-10 pb-1 lg:pb-0">
           <div className=" left-1/4 lg:w-[50%]">
             <Image
               src="/img/companylist.png"
@@ -155,6 +157,7 @@ Our content marketing services focus on creating high-quality, valuable content 
 <div>
       <section  className="relative" style={{marginTop:30}}>
       <video
+          id="video"
           style={{filter:"brightness('30%')"}}
           src="/videos1/1.mp4#t=0.1"
           autoPlay
@@ -169,6 +172,7 @@ Our content marketing services focus on creating high-quality, valuable content 
           Your browser does not support the video tag.
         </video>
         <video
+          id="video"
           src="/videos1/1.mp4"
           autoPlay
           muted
@@ -196,6 +200,7 @@ Our content marketing services focus on creating high-quality, valuable content 
       </section>
       <section  className="relative">
       <video
+          id="video"
           style={{filter:"brightness('30%')"}}
           src="/videos1/2.mp4#t=0.1"
           autoPlay
@@ -210,6 +215,7 @@ Our content marketing services focus on creating high-quality, valuable content 
           Your browser does not support the video tag.
         </video>
         <video
+          id="video"
           src="/videos1/2.mp4"
           autoPlay
           muted
@@ -237,6 +243,7 @@ Our content marketing services focus on creating high-quality, valuable content 
       </section>
       <section  className="relative">
       <video
+          id="video"
           style={{filter:"brightness('30%')"}}
           src="/videos1/3.mp4#t=0.1"
           autoPlay
@@ -251,6 +258,7 @@ Our content marketing services focus on creating high-quality, valuable content 
           Your browser does not support the video tag.
         </video>
         <video
+          id="video"
           src="/videos1/3.mp4"
           autoPlay
           muted
@@ -278,6 +286,7 @@ Our content marketing services focus on creating high-quality, valuable content 
       </section>
       <section  className="relative">
       <video
+          id="video"
           style={{filter:"brightness('30%')"}}
           src="/videos1/2.mp4#t=0.1"
           autoPlay
@@ -292,6 +301,7 @@ Our content marketing services focus on creating high-quality, valuable content 
           Your browser does not support the video tag.
         </video>
         <video
+          id="video"
           src="/videos1/2.mp4"
           autoPlay
           muted
@@ -344,31 +354,31 @@ Our content marketing services focus on creating high-quality, valuable content 
       </section>
 
       <HomeCarousel data={benefits} />
-      <section style={{flexDirection:'row'}} className="row pt-16 lg:pt-28 mb-20 flex flex-col items-center pb-14 lg:pb-28 dataFadeContainer bg-[#373535]">
+      <section style={{flexDirection:'row'}} className="row pt-16 lg:pt-38 mb-20 flex flex-col items-center pb-14 lg:pb-28 dataFadeContainer bg-[#373535]">
       <div style={{marginLeft:'20%'}} className="relative h-[5vh] lg:h-[5vh] lg:ml-20 w-20vw lg:w-[260px]">
-                  <h1 className="font-bodoniModa text-white text-xl lg:text-2xl">
+                  <h1 className="font-ElMessiri text-white text-xl lg:text-3xl">
                     12+
                   </h1>
-                  <p className="para mt-2 lg:mt-4 text-white">Lorem Ipsum</p>
+                  <p className="font-Manrope font-light para mt-2 lg:mt-2 text-white">Lorem Ipsum</p>
                 </div>
                 <div className="relative h-[5vh] lg:h-[5vh] w-40vw lg:w-[260px]">
-                  <h1 className="font-bodoniModa text-white text-xl lg:text-2xl">
+                  <h1 className="font-ElMessiri text-white text-xl lg:text-3xl">
                     10+
                   </h1>
-                  <p className="para mt-2 lg:mt-4 text-white">Countries with happy  <br /> <br />
+                  <p className="font-Manrope font-light  para mt-2 lg:mt-2 text-white">Countries with happy  <br /> <br />
                   customers </p>
                 </div>
                 <div className="relative h-[5vh] lg:h-[5vh] w-40vw lg:w-[260px]">
-                  <h1 className="font-bodoniModa text-white text-xl lg:text-2xl">
+                  <h1 className="font-ElMessiri text-white text-xl lg:text-3xl">
                     204+
                   </h1>
-                  <p className="para mt-2 lg:mt-4 text-white">Clients across globe <br /> <br /></p>
+                  <p className="ont-Manrope font-light  para mt-2 lg:mt-2 text-white">Clients across globe <br /> <br /></p>
                 </div>
                 <div className="relative h-[5vh] lg:h-[5vh] w-40vw lg:w-[260px]">
-                  <h1 className="font-bodoniModa text-white text-xl lg:text-2xl">
+                  <h1 className="font-ElMessiri text-white text-xl lg:text-3xl">
                     204+
                   </h1>
-                  <p className="para mt-2 lg:mt-4 text-white">Total projects completed<br /> <br /></p>
+                  <p className="font-Manrope font-light  text-weight-300 para mt-2 lg:mt-2 text-white">Total projects completed<br /> <br /></p>
                 </div>
                 </section>
                 

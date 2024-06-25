@@ -11,11 +11,11 @@ export default function Document() {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..900&family=Poppins:wght@300;400;500;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
           rel="stylesheet"
         />
       </Head>
-      <body className="font-poppins text-black w-[100.5vw] overflow-x-hidden">
+      <body className="font-manrope text-black w-[100.5vw] overflow-x-hidden">
         <Main />
         <NextScript />
       </body>

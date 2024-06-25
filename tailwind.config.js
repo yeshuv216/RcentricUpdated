@@ -11,14 +11,12 @@ module.exports = {
         center: true,
       },
       fontFamily: {
-        poppins: ["Poppins"],
-        bodoniModa: ["Bodoni Moda"],
+        manrope: ["Manrope"],
+        optima: ["Optima"],
       },
       colors: {
-        darkGreen: "#133536",
-        grey: "#4D4F52",
-        cream: "#E8D5C8",
-        lightCream: "#faf7f4",
+        darkGreen: "#014F54",
+        gold: "#b89238"
       },
     },
   },

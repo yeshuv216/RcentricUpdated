@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Optima";
+  src: url("/fonts/Optima.ttc");
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
   display: none;
@@ -50,11 +55,24 @@ html.lenis {
   }
 
   .title {
-    @apply text-[1.6rem] lg:text-[2.1rem] leading-[2.2rem] lg:leading-[3rem] uppercase font-bodoniModa font-medium;
+    @apply capitalize font-optima text-2xl lg:text-4xl tracking-wider text-darkGreen;
   }
 
   .para {
-    @apply text-xs font-light tracking-wider text-grey text-pretty;
+    @apply font-light text-base text-[#7D7D7D] leading-[25px]  whitespace-pre-line text-pretty;
+  }
+
+  .cta {
+    @apply uppercase font-medium tracking-widest px-6 lg:px-10 py-2.5 lg:py-3 text-xs bg-black text-white;
+  }
+
+  .abs-center {
+    @apply absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2;
+  }
+
+  /* input styles  */
+  .footerInput {
+    @apply bg-transparent border-b border-white placeholder:text-white text-xs lg:text-sm pb-1 w-full;
   }
 
   .inputContainer {
@@ -79,30 +97,6 @@ html.lenis {
 
   .inputItem2 {
     @apply placeholder:text-white  pl-10 py-2.5 w-full bg-[#000] text-xs lg:text-sm;
-  }
-
-  .greenCta {
-    @apply uppercase py-3 px-16 text-white text-sm tracking-wider;
-  }
-
-  .cta {
-    @apply uppercase font-medium tracking-widest px-6 lg:px-10 py-2.5 lg:py-3 text-xs bg-black text-white;
-  }
-
-  .benefitsImg {
-    @apply h-[65vh] w-full object-cover object-center;
-  }
-
-  .benefitsBox {
-    @apply flex flex-col mt-5 lg:mt-11;
-  }
-
-  .benefitsTitle {
-    @apply text-darkGreen text-2xl lg:text-[1.75rem] lg:leading-[2.2rem] font-bodoniModa mt-3 lg:mt-6 whitespace-pre-line;
-  }
-
-  .benefitsDesc {
-    @apply para text-xs mt-2 lg:mt-4;
   }
 }
 
@@ -136,51 +130,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-#navbar {
-  transition: top 0.6s;
-  background-color: #000;
-  opacity: 19%;
-  height: 6vh;
-}
-#video {
-  filter: blur(3px);
-}
-
-
-#navbar.animate {
-  top: -94px;
-}
-
-#navbar.sticked {
-  top: 0;
-  z-index: 20;
-}
-
-#footer {
-  transition: bottom 0.6s;
-}
-
-#footer.animate {
-  bottom: -65px;
-}
-
-#footer.sticked {
-  bottom: -0.5px;
-  z-index: 20;
-}
-
-.bannerBg {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
-}
-
-.cb-cursor {
-  transition: opacity 0.3s, color 0.4s;
-}
-
 .hero__scrollTo {
   position: absolute;
   bottom: 0;
@@ -190,7 +139,6 @@ input[type="number"] {
   --tw-translate-x: -50%;
   transform: var(--tw-transform);
 }
-
 
 .hero__scrollTo .line {
   position: relative;
@@ -221,7 +169,7 @@ input[type="number"] {
   animation: passingLine 2s linear infinite;
 }
 
-.horizontal{
+.horizontal {
   display: flex;
 }
 
@@ -242,30 +190,30 @@ input[type="number"] {
   }
 }
 
-#scrollConatiner {
-  overflow: auto;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  -webkit-scroll-snap-type: y mandatory;
-  -ms-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory;
-}
-
-#scrollContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  border: 1px solid black;
-  scroll-snap-align: start;
-}
-
 .homeCarousel .swiper-scrollbar {
   width: 51% !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
+}
+
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255)
+  ) !important;
+}
+
+.swiper-3d .swiper-slide-shadow-left {
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255)
+  ) !important;
+}
+
+.swiper-scrollbar-drag {
+  background: #b89238;
 }
 
 @media screen and (max-width: 1024px) {
@@ -273,23 +221,5 @@ input[type="number"] {
     width: 40% !important;
     left: 50% !important;
     transform: translateX(-112%) !important;
-  }
-}
-
-.rewardsCarousel .swiper-scrollbar {
-  width: 51% !important;
-  left: 50% !important;
-  transform: translateX(-75%) !important;
-}
-
-@media screen and (max-width: 1024px) {
-  .rewardsCarousel .swiper-scrollbar {
-    width: 40% !important;
-    left: 50% !important;
-    transform: translateX(-112%) !important;
-  }
-
-  .w-screen {
-    width: 100.5vw;
   }
 }

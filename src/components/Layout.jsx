@@ -11,7 +11,7 @@ import "swiper/css/scrollbar";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import SideBookingForm from "./SideBookingForm";
-import StickyFooter from "./StickyFooter";
+import FooterForm from "./FooterForm";
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -68,7 +68,7 @@ const Layout = ({ children }) => {
         <>{children}</>
         {router.pathname !== "/thankyou" ? (
           <>
-            <StickyFooter />
+            <FooterForm />
             <Footer />
           </>
         ) : null}

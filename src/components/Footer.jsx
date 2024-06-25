@@ -7,7 +7,7 @@ import { BookingFormContext } from "@/providers/BookingFormProvider";
 const Footer = () => {
   const { setIsFromOpen } = useContext(BookingFormContext);
   return (
-    <div className="bg-black text-white pt-10">
+    <div className="bg-[#1A1A1A] text-white pt-10">
       <div className="grid grid-cols-7 mb-2 pb-[15px] justify-items-center lg:justify-items-start">
         <div className="col-span-7 lg:col-span-2 lg:pl-16 flex flex-col items-center lg:items-start">
           <Logo className="size-24 lg:size-32 lg:pl-2 lg:-mt-7" />

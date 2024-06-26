@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { BookingFormContext } from "@/providers/BookingFormProvider";
 import React, { useContext } from "react";
-import XMarkIcon from "./icons/XMarkIcon";
+import { XMarkIcon } from "./Icons";
 import BookingForm from "./BookingForm";
 
 const SideBookingForm = () => {
@@ -10,16 +10,16 @@ const SideBookingForm = () => {
   return (
     <div
       className={cn(
-        "fixed top-0 right-0 h-screen bg-white w-screen lg:w-[40vw] z-50 transition-all duration-[1000ms] ease-in-out shadow-2xl",
-        isFormOpen ? "right-0" : "-right-full"
+        "fixed right-0 top-0 z-50 h-screen w-screen bg-white shadow-2xl transition-all duration-[1000ms] ease-in-out lg:w-[40vw]",
+        isFormOpen ? "right-0" : "-right-full",
       )}
     >
       <XMarkIcon
         onClick={() => setIsFromOpen(false)}
-        className="size-6 absolute left-4 lg:right-5 lg:left-auto top-4 lg:top-5 cursor-pointer"
+        className="absolute left-4 top-4 size-6 cursor-pointer lg:left-auto lg:right-5 lg:top-5"
       />
-      <div className="flex flex-col items-center w-full mt-12 px-5 lg:px-12">
-        <h1 className="uppercase text-xl lg:text-3xl font-bodoniModa font-medium lg:font-normal">
+      <div className="mt-12 flex w-full flex-col items-center px-5 lg:px-12">
+        <h1 className="font-bodoniModa text-xl font-medium uppercase lg:text-3xl lg:font-normal">
           EXPRESS YOUR INTEREST
         </h1>
         <BookingForm isSideForm={true} />

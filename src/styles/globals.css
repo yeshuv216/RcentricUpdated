@@ -55,11 +55,11 @@ html.lenis {
   }
 
   .title {
-    @apply capitalize font-optima text-2xl lg:text-4xl tracking-wider text-darkGreen;
+    @apply capitalize font-optima text-2xl lg:text-4xl tracking-wide text-darkGreen;
   }
 
   .para {
-    @apply font-light text-base text-[#7D7D7D] leading-[25px]  whitespace-pre-line text-pretty;
+    @apply text-sm lg:text-base text-[#7D7D7D] leading-[25px]  whitespace-pre-line text-pretty;
   }
 
   .cta {
@@ -72,7 +72,7 @@ html.lenis {
 
   /* input styles  */
   .footerInput {
-    @apply bg-transparent border-b border-white placeholder:text-white text-xs lg:text-sm pb-1 w-full;
+    @apply bg-transparent border-b border-white placeholder:text-white text-xs lg:text-sm pb-1.5   w-full;
   }
 
   .inputContainer {

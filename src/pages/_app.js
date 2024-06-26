@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
   }, []);
   return (
     <>
-      <GoogleTagManager gtmId="GTM-5ZCXHBHL" />
+      <GoogleTagManager gtmId="" />
       <Layout>
         <Component {...pageProps} />
       </Layout>

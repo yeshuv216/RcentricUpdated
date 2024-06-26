@@ -1,96 +1,89 @@
-import React, { useContext } from "react";
-import Logo from "./icons/Logo";
+import Image from "next/image";
 import Link from "next/link";
-import CheveronDownIcon from "./icons/CheveronDownIcon";
-import { BookingFormContext } from "@/providers/BookingFormProvider";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon,
+} from "./Icons";
 
 const Footer = () => {
-  const { setIsFromOpen } = useContext(BookingFormContext);
   return (
-    <div className="bg-[#1A1A1A] text-white pt-10">
-      <div className="grid grid-cols-7 mb-2 pb-[15px] justify-items-center lg:justify-items-start">
-        <div className="col-span-7 lg:col-span-2 lg:pl-16 flex flex-col items-center lg:items-start">
-          <Logo className="size-24 lg:size-32 lg:pl-2 lg:-mt-7" />
-        </div>
-        <div className="col-span-7 lg:col-span-1 mt-6 lg:mt-0 text-sm">
-          <p className="text-[#7f7f7f]">Pages</p>
-          <ul className="grid grid-cols-2 lg:flex flex-col gap-1.5 lg:gap-1 mt-1">
-            <li>
-              <Link href="/">Overview</Link>
-            </li>
-            <li>
-              <Link href="/about-us">About Us</Link>
-            </li>
-            <li>
-              <Link href="/benefits">Benefits</Link>
-            </li>
-            <li>
-              <Link href="/rewards-privileges">Rewards & Privileges</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-3 lg:col-span-1 mt-6 lg:mt-0 text-sm -ml-6 lg:ml-0">
-          <p className="text-[#7f7f7f]">Queries</p>
-          <ul className="flex flex-col gap-1 mt-1">
-            <li>
-              <Link href="/faqs">FAQS</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-3 lg:col-span-1 block text-sm mt-6 lg:mt-0 -ml-6 lg:ml-0">
-          <p className="text-[#7f7f7f]">Support</p>
-          <ul className="flex flex-col gap-1 mt-1">
-            <li>
-              <Link href="/contact-us">Contact Us</Link>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-7 lg:col-span-2 mt-8 lg:mt-0 pt-2 text-sm hidden lg:flex flex-col items-center lg:items-start">
-          <h1 className="text-xl font-bodoniModa uppercase">
-            Stay in the know
-          </h1>
-          <button
-            onClick={() => setIsFromOpen(true)}
-            className="text-[10px] lg:text-[14px] uppercase lg:w-[220px] font-medium tracking-wider h-[40px] bg-white text-black w-[140px] mt-2"
-          >
-            Contact Us
-          </button>
-          <p className="mt-4 text-center lg:text-left font-light">
-            By signing up i want to hear about new <br />
-            updates and masterpieces and agree with <br />
-            the data protection policy of Liv
-          </p>
-        </div>
-      </div>
+    <div className="bg-[#1A1A1A] py-10 text-white">
+      <div className="container flex w-11/12 flex-col items-center justify-center pb-[15px]">
+        <Image
+          src="/img/logo-gold.png"
+          alt="rcentric"
+          height={250}
+          width={50}
+          className="h-[35px] w-auto"
+        />
+        <div className="col-span-7 mt-8 h-[0.5px] w-full bg-white/20"></div>
 
-      <div className="border-t border-white border-opacity-5 pt-6 pb-20">
-        <div className="grid grid-cols-7 justify-items-center lg:justify-items-start gap-y-4">
-          <div className="lg:pl-16 text-sm col-span-7 lg:col-span-2 font-radikalLight">
-            R Centric &copy; 2024
+        <div className="mt-8 grid w-full grid-cols-7 gap-y-8 text-sm font-light">
+          <div className="col-span-7 flex flex-col gap-2.5 lg:col-span-1">
+            <h1 className="text-lg">Links</h1>
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/blogs">Blogs</Link>
+            <Link href="/career">Career</Link>
+            <Link href="/contact">Contact</Link>
           </div>
-          <div className="col-span-7 lg:col-span-3 w-full"></div>
-          <div className="col-span-7 lg:col-span-2 flex gap-4 text-sm ml-[20px] lg:ml-0">
-            <label htmlFor="languageSelect" className="text-[#7f7f7f]">
-              Language
-            </label>
+          <div className="col-span-7 flex flex-col lg:col-span-2">
+            <h1 className="text-lg">Locations</h1>
+            <p className="mt-2.5 text-sm text-white/50">India | New Delhi</p>
+            <p className="mt-2">
+              R CENTRIC Private Limited <br />
+              B1/H3, Ground Floor, Mathura Road, <br /> Mohan Co - operative,
+              Industrial Area <br /> South East Delhi - 110044
+            </p>
+          </div>
+          <div className="col-span-7 -mt-14 flex flex-col lg:col-span-2 lg:mt-0">
+            <p className="mt-9 text-sm text-white/50">Middle East | Dubai</p>
+            <p className="mt-2">
+              R CENTRIC Information Technology <br /> Co.Sabha Build, Office :
+              G-85, <br /> Jabal Ali Industrial First Dubai, UAE
+            </p>
+          </div>
+          <div className="col-span-7 flex flex-col lg:col-span-2">
+            <h1 className="text-lg">Subscribe To Our Newsletter</h1>
+            <form className="mt-5">
+              <input
+                type="text"
+                placeholder="yourname@gmail.com"
+                className="w-full border-b-[0.5px] border-white bg-transparent pb-1 placeholder:text-white/40"
+              />
+              <button className="cta mt-5 bg-white font-light capitalize text-black">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
 
-            <div className="relative">
-              <select
-                name="languageSelect"
-                id="languageSelect"
-                className="bg-black w-[80px] cursor-pointer pr-5"
-                style={{
-                  backgroundImage: "none",
-                }}
-              >
-                <option value="en">English</option>
-                <option value="gm">German</option>
-                <option value="fr">French</option>
-                <option value="it">Italian</option>
-                <option value="ru">Russian</option>
-              </select>
-              <CheveronDownIcon className="size-2 text-white absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
-            </div>
+        <div className="col-span-7 mt-8 h-[0.5px] w-full bg-white/20"></div>
+
+        <div className="mt-10 flex w-full flex-col items-center justify-between gap-y-4 text-sm lg:flex-row">
+          <p>2024 by R-centric</p>
+          <div className="flex items-center gap-5">
+            <Link href="/">Terms of use</Link>
+            <Link href="/">Privacy</Link>
+            <Link href="/">Legal</Link>
+            <Link href="/">FAQ&apos;s</Link>
+          </div>
+
+          <div className="flex items-center gap-2 text-gold *:border-[0.3px] *:border-white *:p-1.5">
+            <a href="">
+              <LinkedinIcon className="size-4" />
+            </a>
+            <a href="">
+              <TwitterIcon className="size-4" />
+            </a>
+            <a href="">
+              <FacebookIcon className="size-4" />
+            </a>
+            <a href="">
+              <InstagramIcon className="size-4" />
+            </a>
           </div>
         </div>
       </div>

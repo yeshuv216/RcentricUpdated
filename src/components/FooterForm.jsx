@@ -61,7 +61,7 @@ const FooterForm = () => {
   };
 
   return (
-    <section className="w-screen relative">
+    <section className="relative w-full">
       <video
         src="/videos/footer.mp4"
         autoPlay
@@ -69,22 +69,22 @@ const FooterForm = () => {
         loop
         playsInline
         preload="none"
-        className="w-full h-[60vh] lg:h-[85vh] object-center object-cover"
+        className="h-[75vh] w-full object-cover object-center lg:h-[85vh]"
       >
         <source src="/videos/footer.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute top-0 left-0 w-full h-full bg-black/80 flex justify-center items-center">
-        <div className="flex flex-col text-white items-center w-full">
+      <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center bg-black/80">
+        <div className="flex w-full flex-col items-center text-white">
           <h1 className="title text-center text-white">
             Have a Project in Mind
           </h1>
-          <p className="para text-white mt-6">Lets Work Together</p>
+          <p className="para mt-3 lg:mt-6 text-white">Lets Work Together</p>
           <form
             onSubmit={handleOnSubmit}
-            className="mt-8 lg:mt-10 flex flex-col gap-6 lg:gap-8 items-center w-11/12 lg:w-[35%]"
+            className="mt-6 flex w-11/12 flex-col items-center gap-6 lg:mt-10 lg:w-[35%] lg:gap-8"
           >
-            <div className="grid grid-cols-2 gap-x-6 lg:gap-x-10 w-full">
+            <div className="grid w-full grid-cols-2 gap-x-6 lg:gap-x-10">
               <label htmlFor="firstName" className="sr-only">
                 First Name
               </label>
@@ -126,9 +126,9 @@ const FooterForm = () => {
               className="footerInput"
             />
 
-            <div className={"flex gap-4 lg:gap-5 w-full"}>
+            <div className={"flex w-full gap-4 lg:gap-5"}>
               <div
-                className={"w-[35%] lg:w-[20%] min-w-[110px] lg:min-w-[120px] "}
+                className={"w-[35%] min-w-[110px] lg:w-[20%] lg:min-w-[120px]"}
               >
                 <label htmlFor="countryCode" className="sr-only">
                   Country Code*
@@ -141,12 +141,12 @@ const FooterForm = () => {
                       type="button"
                       {...rootProps}
                       className={
-                        "relative flex items-center w-full text-sm border-b border-white pb-1"
+                        "relative flex w-full items-center border-b border-white pb-1 text-xs lg;text-sm"
                       }
                     >
                       {children}
                       <div className="flex gap-2">{phoneInput.phone}</div>
-                      <CheveronDown className="size-2.5 absolute right-2 top-1/2 -translate-y-1/2" />
+                      <CheveronDown className="absolute right-2 top-1/2 size-2.5 -translate-y-1/2" />
                     </button>
                   )}
                   dropdownStyleProps={{
@@ -181,14 +181,14 @@ const FooterForm = () => {
               required
               type="text"
               name="message"
-              placeholder="Message"
+              placeholder="Type your message"
               id="message"
               value={formValues.message}
               onChange={handleChange}
               className="footerInput"
             />
 
-            <div className="flex gap-2 w-full items-center justify-start">
+            <div className="flex w-full items-center justify-start gap-2">
               <input
                 type="checkbox"
                 name="privacyPolicy"
@@ -205,7 +205,7 @@ const FooterForm = () => {
 
             <button
               type="submit"
-              className="cta bg-white text-black capitalize"
+              className="cta bg-white font-light capitalize text-black"
             >
               Submit
             </button>

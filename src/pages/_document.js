@@ -15,7 +15,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="font-manrope text-black w-[100.5vw] overflow-x-hidden">
+      <body className="font-manrope text-black">
         <Main />
         <NextScript />
       </body>

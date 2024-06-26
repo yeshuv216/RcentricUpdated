@@ -1,13 +1,11 @@
-import Link from "next/link";
-import Logo from "./icons/Logo";
-import { useContext, useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
-import { cn } from "@/lib/utils";
-import XMarkIcon from "./icons/XMarkIcon";
-import gsap from "gsap";
-import { HamburgerIcon } from "./Icons";
 import useWindowScroll from "@/hooks/useWindowScroll";
+import { cn } from "@/lib/utils";
+import gsap from "gsap";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useRef, useState } from "react";
+import { HamburgerIcon, XMarkIcon } from "./Icons";
 
 const Navbar = () => {
   const windowScroll = useWindowScroll();
@@ -70,7 +68,7 @@ const Navbar = () => {
         stagger: 0.1,
         delay: 0.4,
         ease: "power1.out",
-      }
+      },
     );
   };
 
@@ -94,7 +92,7 @@ const Navbar = () => {
         duration: 1,
         stagger: 0.1,
         ease: "power1.in",
-      }
+      },
     );
   };
 
@@ -103,36 +101,46 @@ const Navbar = () => {
       <nav
         id="navbar"
         className={cn(
-          "h-[60px] flex items-center justify-center w-full fixed top-0 left-0 z-50 bg-black/30 transition-[top] duration-[0.6s] backdrop-blur-[10px]",
+          "fixed left-0 top-0 z-50 flex h-[50px] lg:h-[60px] w-full items-center justify-center bg-black/30 backdrop-blur-[10px] transition-[top] duration-[0.6s]",
           animate ? "top-[-94px]" : "",
-          sticked ? "top-0 z-20" : ""
+          sticked ? "top-0 z-20" : "",
         )}
       >
-        <div className="container flex items-center justify-between pr-5 py-2.5 lg:py-0 relative">
+        <div className="container relative flex w-11/12 items-center justify-between py-2.5 lg:py-0">
           <HamburgerIcon
-            className=" size-6 cursor-pointer text-white"
+            className="size-5 lg:size-6 cursor-pointer text-white"
             onClick={() => openSidebar()}
           />
 
-          <Image src="/img/logo-gold.png" alt="rcentric" height={250} width={50} className="h-[35px] w-auto abs-center"/>
+          <Link href="/" className="lg:abs-center" aria-label="home">
+            <Image
+              src="/img/logo-gold.png"
+              alt="rcentric"
+              height={250}
+              width={50}
+              className="h-[25px] w-auto lg:h-[35px]"
+            />
+          </Link>
 
-          <button className="text-white py-2.5 uppercase tracking-wider text-sm px-8 bg-black">Get in touch</button>
+          <button className="bg-black px-4 py-2 text-xs uppercase tracking-wider text-white lg:px-8 lg:py-2.5 lg:text-sm">
+            Get in touch
+          </button>
         </div>
       </nav>
       <div
         ref={sidebarWrapper}
         className={cn(
-          "fixed top-0 h-screen -left-full w-screen lg:w-[45vw] bg-black/40 z-[50] backdrop-blur-lg text-white ease-in-out"
+          "fixed -left-full top-0 z-[50] h-screen w-screen bg-black/40 text-white backdrop-blur-lg ease-in-out lg:w-[45vw]",
         )}
       >
         <XMarkIcon
-          className="size-6 absolute left-[5%] lg:left-[20%] top-4 lg:top-6 cursor-pointer"
+          className="absolute left-[5%] top-4 size-6 cursor-pointer lg:left-[20%] lg:top-6"
           onClick={() => closeSidebar()}
         />
-        <div className="flex flex-col justify-center items-end h-full uppercase">
-          <div className="w-[85%] lg:w-[80%] relative">
+        <div className="flex h-full flex-col items-end justify-center uppercase">
+          <div className="relative w-[85%] lg:w-[80%]">
             <div
-              className="text-2xl lg:text-2xl flex flex-col gap-6 lg:gap-8 *:cursor-pointer"
+              className="flex flex-col gap-6 text-2xl *:cursor-pointer lg:gap-8 lg:text-2xl"
               ref={linkWrapper}
             >
               <p
@@ -140,7 +148,7 @@ const Navbar = () => {
                 className={cn(
                   router.pathname === "/"
                     ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white"
+                    : "text-[#CBCBCB] hover:text-white",
                 )}
               >
                 HOME
@@ -150,7 +158,7 @@ const Navbar = () => {
                 className={cn(
                   router.pathname === "/about-us"
                     ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white"
+                    : "text-[#CBCBCB] hover:text-white",
                 )}
               >
                 ABOUT US
@@ -160,7 +168,7 @@ const Navbar = () => {
                 className={cn(
                   router.pathname === "/benefits"
                     ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white"
+                    : "text-[#CBCBCB] hover:text-white",
                 )}
               >
                 Benefits
@@ -170,7 +178,7 @@ const Navbar = () => {
                 className={cn(
                   router.pathname === "/rewards-privileges"
                     ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white"
+                    : "text-[#CBCBCB] hover:text-white",
                 )}
               >
                 Rewards & Privileges
@@ -181,8 +189,8 @@ const Navbar = () => {
                 className={cn(
                   router.pathname === "/faqs"
                     ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white ",
-                  "text-sm lg:text-base mt-6"
+                    : "text-[#CBCBCB] hover:text-white",
+                  "mt-6 text-sm lg:text-base",
                 )}
               >
                 FAQ
@@ -193,7 +201,7 @@ const Navbar = () => {
                   router.pathname === "/contact-us"
                     ? "text-white"
                     : "text-[#CBCBCB] hover:text-white",
-                  "text-sm lg:text-base -mt-3 lg:-mt-5"
+                  "-mt-3 text-sm lg:-mt-5 lg:text-base",
                 )}
               >
                 Contact Us

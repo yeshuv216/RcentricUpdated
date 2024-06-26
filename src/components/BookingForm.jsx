@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useContext, useState } from "react";
 import { CountrySelector, usePhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
-import CheveronDownIcon from "./icons/CheveronDownIcon";
+import { CheveronDown } from "./Icons";
 
 const BookingForm = ({ isSideForm = false }) => {
   const [formValues, setFormValues] = useState({
@@ -98,16 +98,16 @@ const BookingForm = ({ isSideForm = false }) => {
     <form
       onSubmit={handleOnSubmit}
       className={cn(
-        "flex flex-col ",
+        "flex flex-col",
         isSideForm
-          ? "w-full gap-2 lg:gap-2 mt-6 lg:mt-10"
-          : "w-11/12 lg:w-[27%] gap-4 lg:gap-8 mt-12"
+          ? "mt-6 w-full gap-2 lg:mt-10 lg:gap-2"
+          : "mt-12 w-11/12 gap-4 lg:w-[27%] lg:gap-8",
       )}
     >
       <div
         className={cn(
           "grid grid-cols-2 gap-5",
-          isSideForm ? "gap-4 lg:gap-5" : ""
+          isSideForm ? "gap-4 lg:gap-5" : "",
         )}
       >
         <div className={cn(isSideForm ? "inputContainer2" : "inputContainer")}>
@@ -124,7 +124,11 @@ const BookingForm = ({ isSideForm = false }) => {
             id="firstName"
             value={formValues.firstName}
             onChange={handleChange}
-            className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}
+            className={cn(
+              isSideForm
+                ? "inputItem2 border-white-500 w-[200px] border-b-2 lg:w-[200px]"
+                : "inputItem border-white-500 w-[200px] border-b-2 lg:w-[200px]",
+            )}
           />
         </div>
 
@@ -142,7 +146,11 @@ const BookingForm = ({ isSideForm = false }) => {
             id="lastName"
             value={formValues.lastName}
             onChange={handleChange}
-            className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}
+            className={cn(
+              isSideForm
+                ? "inputItem2 border-white-500 w-[200px] border-b-2 lg:w-[200px]"
+                : "inputItem border-white-500 w-[200px] border-b-2 lg:w-[200px]",
+            )}
           />
         </div>
       </div>
@@ -150,14 +158,14 @@ const BookingForm = ({ isSideForm = false }) => {
       <div
         className={
           isSideForm
-            ? "flex lg:grid lg:grid-cols-1 gap-5"
-            : "flex lg:grid lg:grid-cols-2 gap-5"
+            ? "flex gap-5 lg:grid lg:grid-cols-1"
+            : "flex gap-5 lg:grid lg:grid-cols-2"
         }
       >
         <div
           className={cn(
             isSideForm ? "inputContainer2" : "inputContainer",
-            "w-[35%] lg:w-full"
+            "w-[35%] lg:w-full",
           )}
         >
           <label
@@ -173,44 +181,52 @@ const BookingForm = ({ isSideForm = false }) => {
             id="phone"
             value={formValues.phone}
             onChange={handleChange}
-            className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}
+            className={cn(
+              isSideForm
+                ? "inputItem2 border-white-500 w-[200px] border-b-2 lg:w-[200px]"
+                : "inputItem border-white-500 w-[200px] border-b-2 lg:w-[200px]",
+            )}
           />
-       </div>
-       <div
+        </div>
+        <div
           className={cn(
             isSideForm ? "inputContainer2" : "inputContainer",
-            "w-[35%] lg:w-full"
+            "w-[35%] lg:w-full",
           )}
         >
-        <label
-          htmlFor="email"
-          className={cn(isSideForm ? "inputLabel2" : "inputLabel")}
-        >
-          Email Address*
-        </label>
-        <input
-          required
-          type="email"
-          name="email"
-          id="email"
-          value={formValues.email}
-          onChange={handleChange}
-          className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[200px] w-[200px]" : "inputItem border-b-2 border-white-500 lg:w-[200px] w-[200px]")}
-        />
+          <label
+            htmlFor="email"
+            className={cn(isSideForm ? "inputLabel2" : "inputLabel")}
+          >
+            Email Address*
+          </label>
+          <input
+            required
+            type="email"
+            name="email"
+            id="email"
+            value={formValues.email}
+            onChange={handleChange}
+            className={cn(
+              isSideForm
+                ? "inputItem2 border-white-500 w-[200px] border-b-2 lg:w-[200px]"
+                : "inputItem border-white-500 w-[200px] border-b-2 lg:w-[200px]",
+            )}
+          />
         </div>
       </div>
 
       <div
         className={
           isSideForm
-            ? "flex lg:grid lg:grid-cols-1 gap-5"
-            : "flex lg:grid lg:grid-cols-2 gap-5"
+            ? "flex gap-5 lg:grid lg:grid-cols-1"
+            : "flex gap-5 lg:grid lg:grid-cols-2"
         }
       >
         <div
           className={cn(
             isSideForm ? "inputContainer2" : "inputContainer",
-            "w-[35%] lg:w-full"
+            "w-[35%] lg:w-full",
           )}
         >
           <label
@@ -227,10 +243,10 @@ const BookingForm = ({ isSideForm = false }) => {
                 type="button"
                 {...rootProps}
                 className={cn(
-                  "relative flex items-center bg-[#000] w-full text-sm",
+                  "relative flex w-full items-center bg-[#000] text-sm",
                   isSideForm
-                    ? "py-1.5 lg:py-2 pl-2 text-xs lg:text-sm"
-                    : "py-2 lg:py-3 pl-2 lg:pl-4 "
+                    ? "py-1.5 pl-2 text-xs lg:py-2 lg:text-sm"
+                    : "py-2 pl-2 lg:py-3 lg:pl-4",
                 )}
               >
                 {children}
@@ -238,7 +254,7 @@ const BookingForm = ({ isSideForm = false }) => {
                   {phoneInput.phone}{" "}
                   <span className="hidden lg:block"> {rootProps.title}</span>
                 </div>
-                <CheveronDownIcon className="size-2.5 absolute right-2 top-1/2 -translate-y-1/2" />
+                <CheveronDown className="absolute right-2 top-1/2 size-2.5 -translate-y-1/2" />
               </button>
             )}
             dropdownStyleProps={{
@@ -248,7 +264,6 @@ const BookingForm = ({ isSideForm = false }) => {
             }}
           />
         </div>
-
       </div>
 
       <div className={cn(isSideForm ? "inputContainer2" : "inputContainer")}>
@@ -261,7 +276,11 @@ const BookingForm = ({ isSideForm = false }) => {
         <select
           name="buildingName"
           id="buildingName"
-          className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[500px] w-[500px]" : "inputItem border-b-2 border-white-500 lg:w-[500px] w-[500px]")}
+          className={cn(
+            isSideForm
+              ? "inputItem2 border-white-500 w-[500px] border-b-2 lg:w-[500px]"
+              : "inputItem border-white-500 w-[500px] border-b-2 lg:w-[500px]",
+          )}
           value={formValues.buildingName}
           onChange={handleChange}
           required
@@ -275,17 +294,20 @@ const BookingForm = ({ isSideForm = false }) => {
           htmlFor="propertyType"
           className={cn(isSideForm ? "inputLabel2" : "inputLabel")}
         >
-         Type Your Message
+          Type Your Message
         </label>
         <select
           name="propertyType"
           id="propertyType"
-          className={cn(isSideForm ? "inputItem2 border-b-2 border-white-500 lg:w-[500px] w-[500px]" : "inputItem border-b-2 border-white-500 lg:w-[500px] w-[500px]")}
+          className={cn(
+            isSideForm
+              ? "inputItem2 border-white-500 w-[500px] border-b-2 lg:w-[500px]"
+              : "inputItem border-white-500 w-[500px] border-b-2 lg:w-[500px]",
+          )}
           value={formValues.propertyType}
           onChange={handleChange}
           required
-        >
-        </select>
+        ></select>
       </div>
 
       <div className="flex justify-center">

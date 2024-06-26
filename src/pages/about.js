@@ -45,7 +45,7 @@ const About = () => {
         <h1 className="title mt-14 text-center text-3xl lg:text-5xl">
           Some headline for About
         </h1>
-        <p className="para mt-8 w-full text-center text-base font-light !leading-[35px] tracking-wider lg:w-[60%] lg:text-xl">
+        <p className="para mt-8 w-full text-center text-base font-light !leading-[35px] tracking-wider lg:w-[70%] lg:text-xl">
           Our content marketing services focus on creating high-quality,
           valuable content that resonates with your audience, drives engagement,
           and builds brand authority.

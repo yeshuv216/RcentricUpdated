@@ -101,14 +101,14 @@ const Navbar = () => {
       <nav
         id="navbar"
         className={cn(
-          "fixed left-0 top-0 z-50 flex h-[50px] lg:h-[60px] w-full items-center justify-center bg-black/30 backdrop-blur-[10px] transition-[top] duration-[0.6s]",
+          "fixed left-0 top-0 z-50 flex h-[50px] w-full items-center justify-center bg-black/30 backdrop-blur-[10px] transition-[top] duration-[0.6s] lg:h-[60px]",
           animate ? "top-[-94px]" : "",
           sticked ? "top-0 z-20" : "",
         )}
       >
         <div className="container relative flex w-11/12 items-center justify-between py-2.5 lg:py-0">
           <HamburgerIcon
-            className="size-5 lg:size-6 cursor-pointer text-white"
+            className="size-5 cursor-pointer text-white lg:size-6"
             onClick={() => openSidebar()}
           />
 

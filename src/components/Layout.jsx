@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
     <>
       <BookingFormProvider>
         <Head>
-          <link rel="icon" type="image/x-icon" href="/logo.svg" />
+          <link rel="icon" type="image/x-icon" href="/img/monogram.png" />
           <meta
             name="description"
             content="R Centric is Software service company"

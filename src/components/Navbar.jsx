@@ -130,81 +130,48 @@ const Navbar = () => {
       <div
         ref={sidebarWrapper}
         className={cn(
-          "fixed -left-full top-0 z-[50] h-screen w-screen bg-black/40 text-white backdrop-blur-lg ease-in-out lg:w-[45vw]",
+          "fixed -left-full top-0 z-[50] h-screen w-screen bg-white ease-in-out lg:w-[45vw]",
         )}
       >
         <XMarkIcon
-          className="absolute left-[5%] top-4 size-6 cursor-pointer lg:left-[20%] lg:top-6"
+          className="absolute left-[5%] top-4 size-6 cursor-pointer lg:left-[10%] lg:top-10"
           onClick={() => closeSidebar()}
         />
-        <div className="flex h-full flex-col items-end justify-center uppercase">
+        <Image
+          src="/img/logo-gold.png"
+          alt="rcentric"
+          height={250}
+          width={50}
+          className="absolute right-[5%] top-4 h-[25px] w-auto lg:right-[5%] lg:top-8 lg:h-[45px]"
+        />
+        <div className="flex h-full flex-col items-end justify-center">
           <div className="relative w-[85%] lg:w-[80%]">
             <div
-              className="flex flex-col gap-6 text-2xl *:cursor-pointer lg:gap-8 lg:text-2xl"
+              className="flex flex-col gap-6 text-2xl text-darkGreen *:cursor-pointer lg:gap-8 lg:text-4xl"
               ref={linkWrapper}
             >
-              <p
-                onClick={() => navigate("/")}
-                className={cn(
-                  router.pathname === "/"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white",
-                )}
-              >
-                HOME
-              </p>
-              <p
-                onClick={() => navigate("/about-us")}
-                className={cn(
-                  router.pathname === "/about-us"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white",
-                )}
-              >
-                ABOUT US
-              </p>
-              <p
-                onClick={() => navigate("/benefits")}
-                className={cn(
-                  router.pathname === "/benefits"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white",
-                )}
-              >
-                Benefits
-              </p>
-              <p
-                onClick={() => navigate("/rewards-privileges")}
-                className={cn(
-                  router.pathname === "/rewards-privileges"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white",
-                )}
-              >
-                Rewards & Privileges
-              </p>
+              <p onClick={() => navigate("/")}>Home</p>
+              <p onClick={() => navigate("/about")}>Who we are</p>
+              <p onClick={() => navigate("/services")}>Services</p>
+              <p onClick={() => navigate("/")}>Portfolio</p>
 
               <p
-                onClick={() => navigate("/faqs")}
-                className={cn(
-                  router.pathname === "/faqs"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white",
-                  "mt-6 text-sm lg:text-base",
-                )}
+                onClick={() => navigate("/blogs")}
+                className={cn("subLinkItem mt-6 lg:mt-6")}
               >
-                FAQ
+                Blogs
               </p>
               <p
-                onClick={() => navigate("/contact-us")}
-                className={cn(
-                  router.pathname === "/contact-us"
-                    ? "text-white"
-                    : "text-[#CBCBCB] hover:text-white",
-                  "-mt-3 text-sm lg:-mt-5 lg:text-base",
-                )}
+                onClick={() => navigate("/contact")}
+                className={cn("subLinkItem")}
               >
-                Contact Us
+                Contact
+              </p>
+              <p
+                onClick={() => navigate("/career")}
+                className={cn("subLinkItem")}
+              >
+                Career
               </p>
             </div>
           </div>

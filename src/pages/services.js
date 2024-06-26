@@ -3,7 +3,6 @@ import Statistics from "@/components/Statistics";
 import { blogs, stats } from "@/lib/contants";
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
 
 const Services = () => {
   return (
@@ -53,9 +52,9 @@ const Services = () => {
         </p>
       </section>
 
-      <Statistics data={stats}/>
+      <Statistics data={stats} />
 
-      <BlogsSlider data={blogs}/>
+      <BlogsSlider data={blogs} />
     </>
   );
 };

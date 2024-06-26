@@ -51,28 +51,32 @@ html.lenis {
 
 @layer components {
   .subtitle {
-    @apply uppercase text-xs text-[#585858] tracking-widest;
+    @apply text-xs uppercase tracking-widest text-[#585858];
   }
 
   .title {
-    @apply capitalize font-optima text-2xl lg:text-4xl tracking-wide text-darkGreen;
+    @apply font-optima text-2xl capitalize tracking-wide text-darkGreen lg:text-4xl;
   }
 
   .para {
-    @apply text-sm lg:text-base text-[#7D7D7D] leading-[25px]  whitespace-pre-line text-pretty;
+    @apply whitespace-pre-line text-pretty text-sm leading-[25px] text-[#7D7D7D] lg:text-base;
   }
 
   .cta {
-    @apply uppercase font-medium tracking-widest px-6 lg:px-10 py-2.5 lg:py-3 text-xs bg-black text-white;
+    @apply bg-black px-6 py-2.5 text-xs font-medium uppercase tracking-widest text-white lg:px-10 lg:py-3;
   }
 
   .abs-center {
-    @apply absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2;
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .subLinkItem {
+    @apply -mt-3 font-manrope text-lg lg:-mt-5 lg:text-2xl font-light;
   }
 
   /* input styles  */
   .footerInput {
-    @apply bg-transparent border-b border-white placeholder:text-white text-xs lg:text-sm pb-1.5   w-full;
+    @apply w-full border-b border-white bg-transparent pb-1.5 text-xs placeholder:text-white lg:text-sm;
   }
 
   .inputContainer {
@@ -84,19 +88,19 @@ html.lenis {
   }
 
   .inputLabel {
-    @apply text-xs lg:text-sm text-[#fff] tracking-wider font-light;
+    @apply text-xs font-light tracking-wider text-[#fff] lg:text-sm;
   }
 
   .inputLabel2 {
-    @apply text-xs text-[#fff] tracking-wider font-light;
+    @apply text-xs font-light tracking-wider text-[#fff];
   }
 
   .inputItem {
-    @apply placeholder:text-white pl-10 lg:pl-4 py-2.5 lg:py-3.5 text-sm w-full bg-[#000];
+    @apply w-full bg-[#000] py-2.5 pl-10 text-sm placeholder:text-white lg:py-3.5 lg:pl-4;
   }
 
   .inputItem2 {
-    @apply placeholder:text-white  pl-10 py-2.5 w-full bg-[#000] text-xs lg:text-sm;
+    @apply w-full bg-[#000] py-2.5 pl-10 text-xs placeholder:text-white lg:text-sm;
   }
 }
 
